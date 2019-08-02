@@ -1,6 +1,4 @@
-# duo_unix Puppet v3 Module (Dev Status: Inactive)
-
-:exclamation: **This project was archived on 2/20/2018.**
+# duo_unix Puppet v3 Module
 
 ## Table of Contents
 
@@ -17,9 +15,9 @@ The duo_unix Puppet module installs and manages duo_unix (`login_duo` or `pam_du
 
 ## Description
 
-The duo_unix module handles the deployment of duo_unix (`login_duo` or 
-`pam_duo`) across a range of Linux distributions. The module will handle 
-repository dependencies, installation of the duo_unix package, configuration 
+The duo_unix module handles the deployment of duo_unix (`login_duo` or
+`pam_duo`) across a range of Linux distributions. The module will handle
+repository dependencies, installation of the duo_unix package, configuration
 of OpenSSH, and PAM alterations as needed.
 
 For further information about duo_unix, view the official
@@ -79,11 +77,11 @@ while others are optional.
   Configures the API host (*host*) value.
 
 #### `fallback_local_ip [optional]`
-  Configures whether or not to fallback to the server's IP. Valid options are 
+  Configures whether or not to fallback to the server's IP. Valid options are
   *yes* and *no*. The default is *no*.
 
 #### `failmode [optional]`
-  Configures how to fail if the Duo service is misconfigured. Valid options are 
+  Configures how to fail if the Duo service is misconfigured. Valid options are
   *safe* (open) and *secure* (closed). The default is *safe*.
 
 #### `pushinfo [optional]`
@@ -91,7 +89,7 @@ while others are optional.
   Valid options are *yes* and *no*. The default is *no*.
 
 #### `autopush [optional]`
-  Configures whether to send a push automatically to a user if their phone is 
+  Configures whether to send a push automatically to a user if their phone is
   capable. Valid options are *yes* and *no*. The default is *no*.
 
 #### `prompts [optional]`
@@ -117,7 +115,7 @@ while others are optional.
   for this setting.
 
 #### `manage_ssh [optional]`
-  Configures whether or not to allow the module to manage the SSH service/package. 
+  Configures whether or not to allow the module to manage the SSH service/package.
   The default is *true*.
 
 #### `manage_pam [optinal]`
@@ -133,8 +131,8 @@ while others are optional.
 
 ## Support and Limitations
 
-This module built on and tested against Puppet 3.2.4. It does not yet support 
-Puppet 4 and is no longer being actively developed. Duo continues to provide 
+This module built on and tested against Puppet 3.2.4. It does not yet support
+Puppet 4 and is no longer being actively developed. Duo continues to provide
 best-effort support for this module.
 
 The module has been tested on:
@@ -150,13 +148,13 @@ The module has been tested on:
 * Ubuntu 12.04.5 (32/64-bit)
 * Ubuntu 14.04.3 (32/64-bit)
 
-If you test the module on other Linux distributions (or different versions of 
-the above), please provide feedback as able on successes or failures. 
+If you test the module on other Linux distributions (or different versions of
+the above), please provide feedback as able on successes or failures.
 
-**Caution:** The use of this module will edit OpenSSH and/or PAM configuration 
+**Caution:** The use of this module will edit OpenSSH and/or PAM configuration
 files depending on the usage defined. These modifications have only been tested
-against default distribution configurations and could impact your settings. Be 
-sure to test this module against non-production systems before attempting to 
+against default distribution configurations and could impact your settings. Be
+sure to test this module against non-production systems before attempting to
 deploy it across your critical infrastucture.
 
 ## Thanks
