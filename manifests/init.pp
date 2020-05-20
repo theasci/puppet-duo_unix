@@ -36,7 +36,6 @@ class duo_unix (
     'RedHat': {
       $duo_package = 'duo_unix'
       $ssh_service = 'sshd'
-      $gpg_file    = '/etc/pki/rpm-gpg/RPM-GPG-KEY-DUO'
 
       $pam_file = $::operatingsystemrelease ? {
         /^5/ => '/etc/pam.d/system-auth',
@@ -55,7 +54,6 @@ class duo_unix (
     'Debian': {
       $duo_package = 'duo-unix'
       $ssh_service = 'ssh'
-      $gpg_file    = '/etc/apt/DEB-GPG-KEY-DUO'
       $pam_file    = '/etc/pam.d/common-auth'
 
       $pam_module  = $::architecture ? {

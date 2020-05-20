@@ -40,7 +40,7 @@ class duo_unix::apt {
   }
 
   exec { 'Duo Security GPG Import':
-    command => '/usr/bin/apt-key add /etc/apt/DEB-GPG-KEY-DUO',
+    command => '/usr/bin/curl -s https://duo.com/DUO-GPG-PUBLIC-KEY.asc | /usr/bin/apt-key add -',
     unless  => '/usr/bin/apt-key list | grep "Duo Security"',
     notify  => Exec['duo-security-apt-update']
   }
